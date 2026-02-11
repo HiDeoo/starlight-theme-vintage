@@ -263,39 +263,32 @@
    * Sidebar
    */
   .sidebar-pane {
+    /* // TODO(HiDeoo)  */
+    --sl-vintage-sidebar-accent-bg-color: oklch(53.51% 0.2523 299);
+    --sl-vintage-sidebar-accent-color: oklch(100% 0 0);
+
     background-color: transparent;
     border-inline-end: none;
-  }
-  /* .sidebar-pane {
 
     summary {
-      flex-direction: row-reverse;
-      gap: 0.375rem;
+      color: var(--sl-vintage-sidebar-accent-color);
+      gap: 0.125rem;
       justify-content: start;
-      padding: 0.2em var(--sl-sidebar-item-padding-inline);
-      padding-inline: calc(var(--sl-sidebar-item-padding-inline) / 2) var(--sl-sidebar-item-padding-inline);
-
-      &:is(:hover, :focus-visible) {
-        &,
-        & .large {
-          color: var(--sl-color-accent-high);
-        }
-      }
-
-      &:is(:hover, :focus-visible) + ul > li {
-        border-inline-start-color: var(--sl-color-accent-high);
-      }
+      padding-block: 0.2em;
+      padding-inline: calc(var(--sl-sidebar-item-padding-inline) * 2.25) var(--sl-sidebar-item-padding-inline);
     }
 
     ul ul li {
-      margin-inline-start: calc(var(--sl-sidebar-item-padding-inline) + (0.625rem / 2));
+      border-inline-start: none;
+      margin-inline-start: 0;
+    }
 
-      &:has(> a[aria-current='page']) {
-        border-inline-start-color: var(--sl-color-accent-high);
-      }
+    ul:not(.top-level) li + li:has(details) {
+      margin-top: 0.375rem;
+      padding-inline-start: calc(var(--sl-sidebar-item-padding-inline) * 1.5);
 
-      &:has(> a:not([aria-current='page']):is(:hover, :focus-visible)) {
-        border-inline-start-color: var(--sl-color-gray-2);
+      & + li {
+        margin-top: 0.375rem;
       }
     }
 
@@ -306,25 +299,33 @@
 
       & > li + li:has(details),
       & > li:has(details) + li:not(:has(details)) {
-        margin-top: 1rem;
+        margin-top: 1.75rem;
       }
+    }
 
-      & > li > .large {
-        color: var(--sl-color-gray-2);
+    .large {
+      color: var(--sl-vintage-sidebar-accent-color);
+
+      @media (min-width: 50rem) {
         font-size: var(--sl-text-sm);
-        font-weight: inherit;
-
-        &:is(:hover, :focus-visible) {
-          color: var(--sl-color-white);
-        }
       }
     }
 
-    a[aria-current='page'] {
-      background-color: initial;
-      color: var(--sl-color-text-accent);
+    a {
+      --sl-sidebar-item-padding-inline: 0.625rem;
+
+      border-radius: 0;
+
+      &:is(:hover, :focus-visible) {
+        background-color: oklch(from var(--sl-vintage-sidebar-accent-bg-color) l c h / 20%);
+      }
+
+      &[aria-current='page'] {
+        background-color: oklch(from var(--sl-vintage-sidebar-accent-bg-color) l c h / 40%);
+        color: var(--sl-vintage-sidebar-accent-color);
+      }
     }
-  } */
+  }
 
   /**
    * Content
