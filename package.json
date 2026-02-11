@@ -1,0 +1,42 @@
+{
+  "name": "starlight-theme-vintage-monorepo",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "// TODO(HiDeoo)",
+  "author": "HiDeoo <github@hideoo.dev> (https://hideoo.dev)",
+  "type": "module",
+  "scripts": {
+    "lint": "astro check --noSync && pnpm -r lint",
+    "format": "prettier -w --cache --ignore-unknown .",
+    "version": "pnpm changeset version && pnpm i --no-frozen-lockfile"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@changesets/changelog-github": "^0.5.2",
+    "@changesets/cli": "^2.29.8",
+    "@hideoo/eslint-config": "^4.1.1",
+    "@hideoo/prettier-config": "^2.0.1",
+    "@hideoo/tsconfig": "^2.0.3",
+    "@types/node": "^18.19.130",
+    "astro": "^5.17.1",
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@10.29.2",
+  "private": true,
+  "sideEffects": false,
+  "keywords": [
+    "// TODO(HiDeoo)"
+  ],
+  "homepage": "https://github.com/HiDeoo/starlight-theme-vintage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HiDeoo/starlight-theme-vintage.git"
+  },
+  "bugs": "https://github.com/HiDeoo/starlight-theme-vintage/issues"
+}

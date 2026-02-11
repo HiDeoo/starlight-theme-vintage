@@ -1,1 +1,1 @@
-# starlight-theme-vintage
+packages/starlight-theme-vintage/README.md
