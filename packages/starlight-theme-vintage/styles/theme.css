@@ -120,6 +120,10 @@
     /* --sl-color-accent: red; */
     --sl-color-accent-high: oklch(73.06% 0.1783 47);
 
+    --sl-color-hairline-light: oklch(95.8% 0.0048 var(--sl-vintage-hue-base) / 10%);
+
+    --sl-vintage-ui-accent-bg-color: oklch(53.51% 0.2523 var(--sl-vintage-hue-base) / 40%);
+    --sl-vintage-ui-accent-color: oklch(100% 0 0);
     --sl-vintage-ui-bg-color-top: var(--sl-color-gray-6);
     --sl-vintage-ui-bg-color-bottom: var(--sl-color-black);
     --sl-vintage-ui-bg-color: linear-gradient(
