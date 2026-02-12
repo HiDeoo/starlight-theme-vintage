@@ -700,42 +700,76 @@
   /**
    * Link buttons
    */
-  /* .sl-link-button {
-    padding: 0.75rem 1rem;
+  .sl-link-button {
+    --sl-vintage-link-button-shape-width: 4px;
+    --sl-vintage-link-button-border-width: calc(var(--sl-vintage-link-button-shape-width) + 1px);
+    --sl-vintage-link-button-primary-color-top: oklch(0.5531 0.246459 264);
+    --sl-vintage-link-button-primary-color-bottom: oklch(0.5939 0.2249 330);
 
-    svg {
-      font-size: 1.25rem;
+    border: var(--sl-vintage-link-button-border-width) solid transparent;
+    border-radius: 0;
+    color: var(--sl-vintage-ui-accent-color);
+    font-size: var(--sl-text-xl);
+    padding-block: calc(0.9375rem - var(--sl-vintage-link-button-border-width));
+
+    &:is(:hover, :focus-visible) {
+      --sl-vintage-link-button-primary-color-top: oklch(0.4931 0.2428 285);
+      --sl-vintage-link-button-primary-color-bottom: oklch(0.6 0.2525 306);
+
+      text-decoration: underline;
     }
 
     &.primary {
-      background-color: var(--sl-color-green-low);
-      border: 1px solid var(--sl-color-green);
-      color: var(--sl-color-green-high);
+      background: none;
+      position: relative;
 
-      &:is(:hover, :focus-visible) {
-        border-color: oklch(52% 0.11 var(--sl-hue-green));
-        color: var(--sl-color-green-accent-invert);
+      &::before {
+        background: linear-gradient(
+          180deg,
+          var(--sl-vintage-link-button-primary-color-top),
+          var(--sl-vintage-link-button-primary-color-bottom)
+        );
+        clip-path: polygon(
+          /* top-left */ 0 var(--sl-vintage-link-button-shape-width),
+          var(--sl-vintage-link-button-shape-width) var(--sl-vintage-link-button-shape-width),
+          var(--sl-vintage-link-button-shape-width) 0,
+          /* top-right */ calc(100% - var(--sl-vintage-link-button-shape-width)) 0,
+          calc(100% - var(--sl-vintage-link-button-shape-width)) var(--sl-vintage-link-button-shape-width),
+          100% var(--sl-vintage-link-button-shape-width),
+          /* bottom-right */ 100% calc(100% - var(--sl-vintage-link-button-shape-width)),
+          calc(100% - var(--sl-vintage-link-button-shape-width)) calc(100% - var(--sl-vintage-link-button-shape-width)),
+          calc(100% - var(--sl-vintage-link-button-shape-width)) 100%,
+          /* bottom-left */ var(--sl-vintage-link-button-shape-width) 100%,
+          var(--sl-vintage-link-button-shape-width) calc(100% - var(--sl-vintage-link-button-shape-width)),
+          0 calc(100% - var(--sl-vintage-link-button-shape-width))
+        );
+        content: '';
+        inset: calc(var(--sl-vintage-link-button-border-width) * -1);
+        position: absolute;
+        z-index: -1;
       }
     }
 
     &.secondary {
-      border-color: var(--sl-color-gray-2);
-      color: var(--sl-color-gray-2);
+      border-image-slice: 5;
+      /* SVG representing the four corner borders, which is basically a cross shape. */
+      border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15'%3E%3Cg fill='oklch(1 0 0)'%3E%3Cpath d='M5 0h5v1H5zM5 14h5v1H5zM0 5h1v5H0zM14 5h1v5h-1zM4 0h1v5H4z'/%3E%3Cpath d='M0 4h5v1H0zM10 0h1v5h-1z'/%3E%3Cpath d='M10 4h5v1h-5zM4 10h1v5H4z'/%3E%3Cpath d='M0 10h5v1H0zM10 10h1v5h-1z'/%3E%3Cpath d='M10 10h5v1h-5z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sl-link-button {
+      transition-property:
+        transform, --sl-vintage-link-button-primary-color-top, --sl-vintage-link-button-primary-color-bottom;
+      transition-duration: 200ms;
+      transition-delay: 30ms;
+      transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 
       &:is(:hover, :focus-visible) {
-        border-color: var(--sl-color-accent-high);
-        color: var(--sl-color-accent-high);
+        transform: translateY(-2px);
       }
     }
-
-    &.minimal {
-      padding-inline: 0.25rem;
-
-      &:is(:hover, :focus-visible) {
-        color: var(--sl-color-accent-high);
-      }
-    }
-  } */
+  }
 
   /**
    * Banner
