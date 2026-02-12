@@ -8,7 +8,7 @@
     position: fixed;
     inset: 0;
     z-index: -10;
-    background: var(--sl-vintage-ui-bg-color);
+    background: var(--sl-vintage-page-bg-color);
   }
 
   /**
@@ -477,8 +477,9 @@
     }
 
     details:not(:where(.not-content *)) {
-      background-color: var(--sl-vintage-ui-accent-bg-color-dimmed);
-      border: 1px solid var(--sl-color-gray-5);
+      background-color: var(--sl-vintage-ui-bg-color);
+      border: 1px solid var(--sl-vintage-ui-border-color);
+      box-shadow: var(--sl-shadow-sm);
       padding-block: 0.25rem;
 
       &[open] {
@@ -495,7 +496,7 @@
       }
 
       &[open] summary {
-        border-bottom: 1px solid var(--sl-color-gray-5);
+        border-bottom: 1px solid var(--sl-vintage-ui-border-color);
         padding-bottom: 0.25rem;
       }
 
@@ -568,9 +569,9 @@
    * Cards
    */
   .card {
-    background-color: var(--sl-vintage-ui-accent-bg-color-dimmed);
-    border-color: var(--sl-color-hairline-light);
-    box-shadow: 0 1px 2px var(--sl-color-gray-5);
+    background-color: var(--sl-vintage-ui-bg-color);
+    border-color: var(--sl-vintage-ui-border-color);
+    /* box-shadow: 0 1px 2px var(--sl-color-gray-5); */
 
     .title .icon {
       border-radius: 0;
@@ -582,10 +583,9 @@
   }
 
   .sl-link-card {
-    background-color: var(--sl-vintage-ui-accent-bg-color-dimmed);
-    border-color: var(--sl-color-hairline-light);
+    background-color: var(--sl-vintage-ui-bg-color);
+    border-color: var(--sl-vintage-ui-border-color);
     border-radius: 0;
-    box-shadow: 0 1px 2px var(--sl-color-gray-5);
 
     .description {
       color: var(--sl-color-gray-2);
@@ -596,7 +596,7 @@
     }
 
     &:is(:hover, :focus-within) {
-      background-color: var(--sl-vintage-ui-accent-bg-color-dimmed);
+      background-color: var(--sl-vintage-ui-bg-color);
       border-color: var(--sl-color-accent-high);
       text-decoration: underline;
       text-decoration-color: var(--sl-color-accent-high);
@@ -643,15 +643,14 @@
   /**
    * File tree
    */
-  /* starlight-file-tree {
-    background-color: var(--sl-rapide-ui-bg-color);
-    border: 1px solid var(--sl-rapide-ui-border-color);
-    border-radius: 0.5rem;
+  starlight-file-tree {
+    background-color: var(--sl-vintage-ui-bg-color);
+    border-color: var(--sl-vintage-ui-border-color);
 
     .directory > details > summary:hover ~ ul {
       border-color: var(--sl-color-accent-high);
     }
-  } */
+  }
 
   /**
    * Notices
