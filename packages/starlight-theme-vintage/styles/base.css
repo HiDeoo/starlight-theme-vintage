@@ -23,7 +23,7 @@
       order: 1;
 
       button[data-open-modal] {
-        background-color: unset;
+        background-color: initial;
         border-radius: 99rem;
         font-size: var(--sl-text-base);
         height: 2.25rem;
@@ -264,7 +264,6 @@
    * Sidebar
    */
   .sidebar-pane {
-    background-color: initial;
     border-inline-end: none;
 
     summary {
@@ -667,16 +666,13 @@
   /**
    * Steps
    */
-  /* .sl-steps > li:last-of-type::after {
-    --guide-width: 1px;
+  .sl-steps > li::before {
+    background-color: var(--sl-vintage-ui-bg-color);
+    box-shadow: inset 0 0 0 1px var(--sl-vintage-ui-border-color);
+  }
 
-    background: linear-gradient(to bottom, var(--sl-color-hairline-light), var(--sl-color-bg) 85%);
-    bottom: var(--bullet-margin);
-    content: '';
-    inset-inline-start: calc((var(--bullet-size) - var(--guide-width)) / 2);
-    position: absolute;
-    top: calc(var(--bullet-size) + var(--bullet-margin));
-    width: var(--guide-width);
+  .sl-steps > li:last-of-type::after {
+    background-color: var(--sl-vintage-ui-border-color);
   }
 
   /**
