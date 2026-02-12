@@ -19,15 +19,11 @@
     padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x) 0;
 
     & div:has(> site-search) {
-      /* // FIXME(HiDeoo)  */
-      order: 1;
-
       button[data-open-modal] {
         background-color: initial;
         border-radius: 99rem;
         font-size: var(--sl-text-base);
         height: 2.25rem;
-        max-width: unset;
         width: min(16.5rem, 100%);
 
         & > kbd {
@@ -52,8 +48,8 @@
     div.header {
       grid-template-columns:
         1fr
-        auto
-        minmax(auto, 16.5rem);
+        minmax(auto, 16.5rem)
+        auto;
     }
   }
 
@@ -327,6 +323,10 @@
    * Content
    */
   .content-panel {
+    & + .content-panel {
+      border-top: none;
+    }
+
     h1 {
       font-weight: 900;
       margin-top: 0.5rem;
@@ -335,13 +335,7 @@
   /* .content-panel {
     padding-top: 1rem;
 
-    & + .content-panel {
-      border-top: none;
-      padding-top: 0;
-    }
-
     h1 {
-      margin-top: 0.5rem;
 
       @media (min-width: 72rem) {
         margin-top: 1rem;
@@ -378,7 +372,7 @@
     starlight-toc {
       h2 {
         font-size: var(--sl-text-xs);
-        padding-inline-start: 1.25rem;
+        padding-inline-start: 1.4375rem;
       }
 
       li {
@@ -521,22 +515,6 @@
       &:is(:hover, :focus-visible) {
         color: var(--sl-color-accent-high);
       }
-    }
-
-    tr:nth-child(2n):not(:where(.not-content *)) {
-      background-color: var(--sl-color-gray-7);
-    }
-
-    :is(th, td):not(:where(.not-content *)) {
-      border: none;
-    }
-
-    th:not(:where(.not-content *)) {
-      border-bottom: 1px solid var(--sl-color-gray-4);
-    }
-
-    td:not(:where(.not-content *)) {
-      border-bottom: 1px solid var(--sl-color-gray-5);
     }
 
     .expressive-code {
@@ -702,13 +680,6 @@
     font-weight: 700;
   }
   /* .sl-badge {
-    --sl-badge-default-text: var(--sl-color-green-high);
-    --sl-badge-tip-text: var(--sl-color-purple-high);
-    --sl-badge-caution-text: var(--sl-color-orange-high);
-    --sl-badge-note-text: var(--sl-color-blue-high);
-    --sl-badge-success-text: var(--sl-color-green-high);
-    --sl-badge-danger-text: var(--sl-color-red-high);
-
     [data-theme='light'] & {
       --sl-badge-default-bg: var(--sl-color-green-low);
       --sl-badge-default-text: var(--sl-color-green-high);
@@ -802,12 +773,11 @@
   /**
    * Banner
    */
-  /* .sl-banner {
-    background-color: var(--sl-color-green-low);
-    border: 1px solid var(--sl-color-green);
-    border-radius: 0.5rem;
+  .sl-banner {
+    background-color: var(--sl-color-blue-low);
+    border: 1px solid var(--sl-color-blue);
     box-shadow: none;
-    color: var(--sl-color-green-high);
+    color: var(--sl-color-white);
     line-height: 1.4;
     margin-block: 2rem -0.5rem;
     margin-inline: var(--sl-content-pad-x);
@@ -817,11 +787,12 @@
     text-wrap: initial;
 
     a {
-      color: var(--sl-color-green-accent);
+      color: var(--sl-color-blue-high);
       text-underline-offset: 0.25em;
 
       &:is(:hover, :focus-visible) {
-        color: var(--sl-color-green-accent-invert);
+        /* // TODO(HiDeoo)  */
+        /* color: var(--sl-color-green-accent-invert); */
       }
     }
 
@@ -838,5 +809,5 @@
 
   [data-has-sidebar] main:has(.sl-banner) {
     display: grid;
-  } */
+  }
 }
