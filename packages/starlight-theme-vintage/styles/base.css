@@ -468,6 +468,13 @@
     code:not(:where(.not-content *)) {
       border-radius: 3px;
     }
+
+    blockquote:not(:where(.not-content *)) {
+      background-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.2);
+      border-inline-start-color: var(--sl-vintage-ui-accent-bg-color);
+      border-inline-start-width: 8px;
+      padding: 1.25em 1.5rem;
+    }
   }
 
   /* .sl-markdown-content {
