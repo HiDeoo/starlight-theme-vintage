@@ -465,6 +465,10 @@
       font-weight: 700;
     }
 
+    code:not(:where(.not-content *)) {
+      border-radius: 3px;
+    }
+
     /* .sl-markdown-content {
     a:not(:where(.not-content *)) {
       color: var(--sl-color-white);
@@ -473,10 +477,6 @@
       &:is(:hover, :focus-visible) {
         color: var(--sl-color-accent-high);
       }
-    }
-
-    code:not(:where(.not-content *)) {
-      border-radius: 5px;
     }
 
     tr:nth-child(2n):not(:where(.not-content *)) {
