@@ -108,6 +108,7 @@
     --sl-color-hairline-light: oklch(0.958 0.0048 var(--sl-vintage-hue-base) / 0.1);
 
     --sl-vintage-ui-accent-bg-color: oklch(0.5351 0.2523 var(--sl-vintage-hue-base) / 0.4);
+    --sl-vintage-ui-accent-bg-color-dimmed: oklch(0.5351 0.2523 var(--sl-vintage-hue-base) / 0.05);
     --sl-vintage-ui-accent-color: oklch(1 0 0);
     --sl-vintage-ui-bg-color-top: var(--sl-color-gray-6);
     --sl-vintage-ui-bg-color-bottom: var(--sl-color-black);

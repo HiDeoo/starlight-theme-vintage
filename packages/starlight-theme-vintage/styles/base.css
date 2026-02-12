@@ -264,7 +264,7 @@
    * Sidebar
    */
   .sidebar-pane {
-    background-color: transparent;
+    background-color: initial;
     border-inline-end: none;
 
     summary {
@@ -477,6 +477,7 @@
     }
 
     details:not(:where(.not-content *)) {
+      background-color: var(--sl-vintage-ui-accent-bg-color-dimmed);
       border: 1px solid var(--sl-color-gray-5);
       padding-block: 0.25rem;
 
@@ -567,7 +568,7 @@
    * Cards
    */
   .card {
-    background-color: transparent;
+    background-color: var(--sl-vintage-ui-accent-bg-color-dimmed);
     border-color: var(--sl-color-hairline-light);
     box-shadow: 0 1px 2px var(--sl-color-gray-5);
 
@@ -581,6 +582,7 @@
   }
 
   .sl-link-card {
+    background-color: var(--sl-vintage-ui-accent-bg-color-dimmed);
     border-color: var(--sl-color-hairline-light);
     border-radius: 0;
     box-shadow: 0 1px 2px var(--sl-color-gray-5);
@@ -594,7 +596,7 @@
     }
 
     &:is(:hover, :focus-within) {
-      background: initial;
+      background-color: var(--sl-vintage-ui-accent-bg-color-dimmed);
       border-color: var(--sl-color-accent-high);
       text-decoration: underline;
       text-decoration-color: var(--sl-color-accent-high);
