@@ -545,48 +545,44 @@
   /**
    * Cards
    */
-  /* .card-grid.stagger {
-    --stagger-height: 2.5rem;
-  }
-
   .card {
-    --sl-text-h1: var(--sl-text-4xl);
-    --sl-text-h2: var(--sl-text-3xl);
-    --sl-text-h3: var(--sl-text-2xl);
-    --sl-text-h4: var(--sl-text-xl);
-    --sl-text-h5: var(--sl-text-lg);
-
-    border-radius: 0.5rem;
-    padding: clamp(1rem, calc(0.125rem + 1.5vw), 2.5rem);
+    background-color: transparent;
+    border-color: var(--sl-color-hairline-light);
+    box-shadow: 0 1px 2px var(--sl-color-gray-5);
 
     .title .icon {
-      font-size: 1.875rem;
+      border-radius: 0;
     }
+  }
+
+  .card-grid.stagger {
+    --stagger-height: 4rem;
   }
 
   .sl-link-card {
-    box-shadow: none;
-
-    &:hover {
-      background: initial;
-    }
-
-    .title {
-      color: var(--sl-color-white);
-    }
+    border-color: var(--sl-color-hairline-light);
+    border-radius: 0;
+    box-shadow: 0 1px 2px var(--sl-color-gray-5);
 
     .description {
-      color: var(--sl-color-gray-3);
-    }
-
-    &:is(:hover, :focus-visible) .description {
       color: var(--sl-color-gray-2);
     }
 
-    .icon {
-      color: var(--sl-color-gray-2);
+    svg {
+      color: var(--sl-color-gray-5);
     }
-  } */
+
+    &:is(:hover, :focus-within) {
+      background: initial;
+      border-color: var(--sl-color-accent-high);
+      text-decoration: underline;
+      text-decoration-color: var(--sl-color-accent-high);
+
+      & .icon {
+        color: var(--sl-color-accent-high);
+      }
+    }
+  }
 
   /**
      * Asides
