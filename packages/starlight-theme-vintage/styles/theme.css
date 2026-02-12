@@ -102,8 +102,9 @@
     /* // TODO(HiDeoo)  */
     --sl-color-accent-high: oklch(0.7306 0.1783 47);
 
+    /* // TODO(HiDeoo)  */
     --sl-color-bg: red;
-    --sl-color-bg-nav: var(--sl-vintage-page-bg-color);
+    --sl-color-bg-nav: var(--sl-color-gray-6);
     --sl-color-bg-sidebar: initial;
     --sl-color-bg-inline-code: oklch(1 0 0 / 0.086);
     /* --sl-color-bg-accent: red; */

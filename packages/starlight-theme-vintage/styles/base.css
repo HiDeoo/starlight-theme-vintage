@@ -503,6 +503,14 @@
         background-color: var(--sl-color-accent-high);
       }
     }
+
+    tr:nth-child(2n):not(:where(.not-content *)) {
+      background-color: oklch(from var(--sl-color-gray-5) l c h / 0.03);
+    }
+
+    td:not(:where(.not-content *)) {
+      border-bottom: 1px solid var(--sl-vintage-ui-border-color);
+    }
   }
 
   /* .sl-markdown-content {
