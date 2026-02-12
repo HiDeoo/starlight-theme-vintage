@@ -7,20 +7,10 @@
     --sl-vintage-hue-base: 294;
 
     --sl-hue-blue: 300;
+    --sl-hue-green: 160;
     --sl-hue-orange: 81;
     --sl-hue-purple: 195;
     --sl-hue-red: 23;
-
-    /* --sl-hue-base: 17;
-    --sl-hue-green: 164;
-
-    --sl-text-h2: var(--sl-text-2xl);
-    --sl-text-h3: var(--sl-text-xl);
-    --sl-text-h4: var(--sl-text-lg);
-    --sl-text-h5: unset; */
-
-    /* --sl
-    -text-h1: var(--sl-text-5xl); */
 
     --sl-text-h1: 2.5rem; /* 40px */
     --sl-text-h2: 1.875rem; /* 30px */
@@ -92,6 +82,10 @@
     --sl-color-blue: oklch(0.5351 0.2523 var(--sl-hue-blue));
     --sl-color-blue-low: oklch(from var(--sl-color-blue) l c h / 0.4);
     --sl-color-blue-high: oklch(0.8356 0.0884 var(--sl-hue-blue));
+
+    --sl-color-green: oklch(0.5626 0.1251 var(--sl-hue-green));
+    --sl-color-green-low: oklch(from var(--sl-color-green) l c h / 0.4);
+    --sl-color-green-high: oklch(0.8421 0.0822 var(--sl-hue-green));
 
     --sl-color-orange: oklch(0.8373 0.1618 var(--sl-hue-orange));
     --sl-color-orange-low: oklch(from var(--sl-color-orange) l c h / 0.4);
