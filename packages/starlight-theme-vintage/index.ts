@@ -18,8 +18,7 @@ export default function starlightThemeRapidePlugin(): StarlightPlugin {
             'starlight-theme-vintage/styles/layers',
             'starlight-theme-vintage/styles/theme',
             'starlight-theme-vintage/styles/base',
-            // TODO(HiDeoo)
-            // ...(config.markdown?.headingLinks === false ? [] : ['starlight-theme-vintage/styles/anchors']),
+            ...(config.markdown?.headingLinks === false ? [] : ['starlight-theme-vintage/styles/anchors']),
           ],
           // TODO(HiDeoo)
           // expressiveCode:
