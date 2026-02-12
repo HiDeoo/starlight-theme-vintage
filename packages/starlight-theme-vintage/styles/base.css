@@ -690,8 +690,8 @@
    */
   .sl-badge {
     --sl-badge-default-bg: var(--sl-vintage-ui-accent-bg-color);
-    --sl-badge-default-border: var(--sl-color-accent-high);
-    --sl-badge-default-text: var(--sl-color-accent-high);
+    --sl-badge-default-border: var(--sl-vintage-ui-accent-color);
+    --sl-badge-default-text: var(--sl-vintage-ui-accent-color);
     --sl-badge-tip-text: var(--sl-color-purple-high);
     --sl-badge-caution-text: var(--sl-color-orange-high);
     --sl-badge-note-text: var(--sl-color-blue-high);
