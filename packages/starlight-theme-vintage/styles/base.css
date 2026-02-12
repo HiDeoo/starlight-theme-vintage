@@ -19,6 +19,7 @@
     padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x) 0;
 
     & div:has(> site-search) {
+      /* // FIXME(HiDeoo)  */
       order: 1;
 
       button[data-open-modal] {
@@ -313,7 +314,7 @@
       border-radius: 0;
 
       &:is(:hover, :focus-visible) {
-        background-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 20%);
+        background-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.2);
       }
 
       &[aria-current='page'] {
@@ -580,61 +581,37 @@
   } */
 
     /**
-   * Asides
-   */
-    /* .starlight-aside {
-    &.starlight-aside--note {
-      --sl-rapide-asides-bg-color: var(--sl-color-blue-low);
-      --sl-rapide-asides-link-color: var(--sl-color-blue-accent);
-      --sl-rapide-asides-link-hover-color: var(--sl-color-blue-accent-invert);
-      --sl-rapide-asides-table-alt-color: var(--sl-color-blue-alt);
-      --sl-rapide-asides-table-border-color: var(--sl-color-blue-alt-invert);
-    }
+     * Asides
+     */
+    .starlight-aside {
+      &.starlight-aside--note {
+        --sl-vintage-asides-table-alt-color: oklch(from var(--sl-color-blue) l c h / 0.1);
+        --sl-vintage-asides-table-border-color: oklch(from var(--sl-color-blue-high) l c h / 0.2);
+      }
 
-    &.starlight-aside--tip {
-      --sl-rapide-asides-bg-color: var(--sl-color-purple-low);
-      --sl-rapide-asides-link-color: var(--sl-color-purple-accent);
-      --sl-rapide-asides-link-hover-color: var(--sl-color-purple-accent-invert);
-      --sl-rapide-asides-table-alt-color: var(--sl-color-purple-alt);
-      --sl-rapide-asides-table-border-color: var(--sl-color-purple-alt-invert);
-    }
+      &.starlight-aside--tip {
+        --sl-vintage-asides-table-alt-color: oklch(from var(--sl-color-purple) l c h / 0.1);
+        --sl-vintage-asides-table-border-color: oklch(from var(--sl-color-purple-high) l c h / 0.2);
+      }
 
-    &.starlight-aside--caution {
-      --sl-rapide-asides-bg-color: var(--sl-color-orange-low);
-      --sl-rapide-asides-link-color: var(--sl-color-orange-accent);
-      --sl-rapide-asides-link-hover-color: var(--sl-color-orange-accent-invert);
-      --sl-rapide-asides-table-alt-color: var(--sl-color-orange-alt);
-      --sl-rapide-asides-table-border-color: var(--sl-color-orange-alt-invert);
-    }
+      &.starlight-aside--caution {
+        --sl-vintage-asides-table-alt-color: oklch(from var(--sl-color-orange) l c h / 0.1);
+        --sl-vintage-asides-table-border-color: oklch(from var(--sl-color-orange-high) l c h / 0.2);
+      }
 
-    &.starlight-aside--danger {
-      --sl-rapide-asides-bg-color: var(--sl-color-red-low);
-      --sl-rapide-asides-link-color: var(--sl-color-red-accent);
-      --sl-rapide-asides-link-hover-color: var(--sl-color-red-accent-invert);
-      --sl-rapide-asides-table-alt-color: var(--sl-color-red-alt);
-      --sl-rapide-asides-table-border-color: var(--sl-color-red-alt-invert);
-    }
+      &.starlight-aside--danger {
+        --sl-vintage-asides-table-alt-color: oklch(from var(--sl-color-red) l c h / 0.1);
+        --sl-vintage-asides-table-border-color: oklch(from var(--sl-color-red-high) l c h / 0.2);
+      }
 
-    border: 1px solid var(--sl-color-asides-border);
-    border-radius: 0.5rem;
-    color: var(--sl-color-asides-text-accent);
+      tr:nth-child(2n) {
+        background-color: var(--sl-vintage-asides-table-alt-color);
+      }
 
-    a {
-      color: var(--sl-rapide-asides-link-color);
+      td {
+        border-color: var(--sl-vintage-asides-table-border-color);
+      }
     }
-
-    a:is(:hover, :focus-visible) {
-      color: var(--sl-rapide-asides-link-hover-color);
-    }
-
-    tr:nth-child(2n) {
-      background-color: var(--sl-rapide-asides-table-alt-color);
-    }
-
-    td {
-      border-color: var(--sl-rapide-asides-table-border-color);
-    }
-  } */
 
     /**
    * File tree
