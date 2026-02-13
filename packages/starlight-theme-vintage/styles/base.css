@@ -341,22 +341,6 @@
         margin-top: 1rem;
       }
     }
-
-    .meta {
-      align-items: center;
-      flex-direction: row-reverse;
-
-      a {
-        border: 1px solid var(--sl-color-gray-5);
-        border-radius: 0.5rem;
-        padding: 0.25rem 0.5rem;
-
-        &:is(:hover, :focus-visible) {
-          border-color: var(--sl-color-gray-2);
-          color: var(--sl-color-gray-2);
-        }
-      }
-    }
   } */
 
   /**
@@ -471,7 +455,7 @@
 
     details:not(:where(.not-content *)) {
       background-color: var(--sl-vintage-ui-bg-color);
-      border: 1px solid var(--sl-vintage-ui-border-color);
+      border: var(--sl-vintage-ui-border-width) solid var(--sl-vintage-ui-border-color);
       box-shadow: var(--sl-shadow-sm);
       padding-block: 0.25rem;
 
@@ -558,7 +542,7 @@
   .card {
     background-color: var(--sl-vintage-ui-bg-color);
     border-color: var(--sl-vintage-ui-border-color);
-    /* box-shadow: 0 1px 2px var(--sl-color-gray-5); */
+    border-width: var(--sl-vintage-ui-border-width);
 
     .title .icon {
       border-radius: 0;
@@ -572,6 +556,7 @@
   .sl-link-card {
     background-color: var(--sl-vintage-ui-bg-color);
     border-color: var(--sl-vintage-ui-border-color);
+    border-width: var(--sl-vintage-ui-border-width);
     border-radius: 0;
 
     .description {
@@ -595,8 +580,8 @@
   }
 
   /**
-     * Asides
-     */
+   * Asides
+   */
   .starlight-aside {
     &.starlight-aside--note {
       --sl-vintage-asides-table-alt-color: oklch(from var(--sl-color-blue) l c h / 0.1);
@@ -633,6 +618,7 @@
   starlight-file-tree {
     background-color: var(--sl-vintage-ui-bg-color);
     border-color: var(--sl-vintage-ui-border-color);
+    border-width: var(--sl-vintage-ui-border-width);
 
     .directory > details > summary:hover ~ ul {
       border-color: var(--sl-color-accent-high);
@@ -656,7 +642,7 @@
    */
   .sl-steps > li::before {
     background-color: var(--sl-vintage-ui-bg-color);
-    box-shadow: inset 0 0 0 1px var(--sl-vintage-ui-border-color);
+    box-shadow: inset 0 0 0 var(--sl-vintage-ui-border-width) var(--sl-vintage-ui-border-color);
   }
 
   .sl-steps > li::after {
@@ -775,7 +761,7 @@
    */
   .sl-banner {
     background-color: var(--sl-color-blue-low);
-    border: 1px solid var(--sl-color-blue);
+    border: var(--sl-vintage-ui-border-width) solid var(--sl-color-blue);
     box-shadow: none;
     color: var(--sl-color-white);
     line-height: 1.4;
