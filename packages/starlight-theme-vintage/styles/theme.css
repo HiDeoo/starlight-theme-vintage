@@ -102,9 +102,7 @@
     /* // TODO(HiDeoo)  */
     --sl-color-accent-high: oklch(0.7306 0.1783 47);
 
-    /* // TODO(HiDeoo)  */
-    /* // TODO(HiDeoo) visible when resizing, is that the page background or something overriden by our base.css?  */
-    --sl-color-bg: red;
+    --sl-color-bg: var(--sl-vintage-page-bg-color-bottom);
     --sl-color-bg-nav: var(--sl-color-gray-6);
     --sl-color-bg-sidebar: initial;
     --sl-color-bg-inline-code: oklch(1 0 0 / 0.086);
@@ -112,8 +110,8 @@
 
     --sl-color-hairline-light: oklch(0.958 0.0048 var(--sl-vintage-hue-base) / 0.1);
 
-    --sl-vintage-page-bg-color-bottom: var(--sl-color-black);
     --sl-vintage-page-bg-color-top: var(--sl-color-gray-6);
+    --sl-vintage-page-bg-color-bottom: var(--sl-color-black);
     --sl-vintage-page-bg-color: linear-gradient(
       180deg,
       var(--sl-vintage-page-bg-color-top),
