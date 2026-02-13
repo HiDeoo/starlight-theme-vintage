@@ -628,14 +628,11 @@
   /**
    * Notices
    */
-  /* .content-panel:first-of-type p:not(:where(.sl-markdown-content *)) {
-    border-radius: 0.5rem;
-    padding: 1rem;
-
+  .content-panel:first-of-type p:not(:where(.sl-markdown-content *)) {
     svg {
       flex-shrink: 0;
     }
-  } */
+  }
 
   /**
    * Steps
