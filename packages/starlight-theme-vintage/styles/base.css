@@ -18,6 +18,10 @@
     border-bottom: none;
     padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x) 0;
 
+    @media (hover: hover) {
+      padding-inline-end: calc(var(--sl-nav-pad-x) + 1.1rem);
+    }
+
     & div:has(> site-search) {
       button[data-open-modal] {
         background-color: initial;
@@ -26,6 +30,12 @@
         height: 2.25rem;
         width: min(16.5rem, 100%);
 
+        @media (prefers-reduced-motion: no-preference) {
+          transition-property: border-color, color;
+          transition-duration: 200ms;
+          transition-timing-function: ease-out;
+        }
+
         & > kbd {
           border: 1px solid var(--sl-color-gray-5);
           font-size: 0.6875rem;
@@ -33,14 +43,6 @@
           margin-inline-end: 0.375rem;
         }
       }
-    }
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    button[data-open-modal] {
-      transition:
-        border-color 200ms ease-out,
-        color 200ms ease-out;
     }
   }
 
@@ -53,82 +55,71 @@
     }
   }
 
-  @media (hover: hover) {
-    header.header {
-      padding-inline-end: calc(var(--sl-nav-pad-x) + 1.1rem);
-    }
-  }
-
   .site-title {
     font-size: var(--sl-text-3xl);
-  }
 
-  @media (prefers-reduced-motion: no-preference) {
-    .site-title {
+    @media (prefers-reduced-motion: no-preference) {
       transition: transform 180ms ease-out;
 
-      &:is(:hover, :focus-within) {
+      &:is(:hover, :focus-visible) {
         transform: translateY(-2px);
       }
     }
   }
 
-  .social-icons a {
-    color: var(--sl-color-gray-2);
+  .social-icons {
+    a {
+      color: var(--sl-color-gray-2);
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition: color 200ms ease-out;
+      }
+
+      &:is(:hover, :focus-visible) {
+        color: var(--sl-color-accent-high);
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      border-inline-end: none;
+    }
+  }
+
+  starlight-lang-select {
+    select {
+      background-color: var(--sl-color-hairline-light);
+      border-radius: 0.25rem;
+      border: 1px solid var(--sl-color-hairline-light);
+      color: var(--sl-color-gray-2);
+      font-size: var(--sl-text-base);
+      font-weight: 400;
+      padding-block: 0.1875rem;
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition-property: border-color, color;
+        transition-duration: 200ms;
+        transition-timing-function: ease-out;
+      }
+
+      &:is(:hover, :focus-visible) {
+        border-color: var(--sl-color-gray-2);
+        color: var(--sl-color-white);
+      }
+    }
+
+    svg {
+      color: var(--sl-color-gray-2);
+    }
 
     &:is(:hover, :focus-within) {
-      color: var(--sl-color-accent-high);
-      opacity: 1;
-    }
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .social-icons a {
-      transition: color 200ms ease-out;
-    }
-  }
-
-  /* header.header {
-
-
-
-    .right-group {
-      gap: 0;
-    }
-
-    .social-icons a {
-      &:last-child {
-        margin-inline-end: -0.125rem;
-      }
-    }
-
-    starlight-lang-select {
-      label {
-        --sl-label-icon-size: 1rem;
-
-        &:is(:hover, :focus-within) {
-          color: var(--sl-color-accent-high);
-        }
-      }
-
-      select {
-        box-sizing: content-box;
-        width: calc(var(--sl-rapide-lang-select-width));
-      }
-    }
-
-    @media (prefers-reduced-transparency) {
-      -webkit-backdrop-filter: initial;
-      backdrop-filter: initial;
-      background-color: var(--sl-color-black);
-    }
-
-    @media (min-width: 50rem) {
-      &:not(:has(starlight-lang-select)) {
-        padding-inline-end: calc(var(--sl-nav-pad-x) - 1rem);
+      svg {
+        color: var(--sl-color-white);
       }
     }
   }
+
+  /*
 
   starlight-menu-button {
     button {
@@ -694,6 +685,18 @@
     font-size: var(--sl-text-xl);
     padding-block: calc(0.9375rem - var(--sl-vintage-link-button-border-width));
 
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property:
+        transform, --sl-vintage-link-button-primary-color-top, --sl-vintage-link-button-primary-color-bottom;
+      transition-duration: 200ms;
+      transition-delay: 30ms;
+      transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+
+      &:is(:hover, :focus-visible) {
+        transform: translateY(-2px);
+      }
+    }
+
     &:is(:hover, :focus-visible) {
       --sl-vintage-link-button-primary-color-top: oklch(0.4931 0.2428 285);
       --sl-vintage-link-button-primary-color-bottom: oklch(0.6 0.2525 306);
@@ -736,20 +739,6 @@
       border-image-slice: 5;
       /* SVG representing the four corner borders, which is basically a cross shape. */
       border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15'%3E%3Cg fill='oklch(1 0 0)'%3E%3Cpath d='M5 0h5v1H5zM5 14h5v1H5zM0 5h1v5H0zM14 5h1v5h-1zM4 0h1v5H4z'/%3E%3Cpath d='M0 4h5v1H0zM10 0h1v5h-1z'/%3E%3Cpath d='M10 4h5v1h-5zM4 10h1v5H4z'/%3E%3Cpath d='M0 10h5v1H0zM10 10h1v5h-1z'/%3E%3Cpath d='M10 10h5v1h-5z'/%3E%3C/g%3E%3C/svg%3E");
-    }
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .sl-link-button {
-      transition-property:
-        transform, --sl-vintage-link-button-primary-color-top, --sl-vintage-link-button-primary-color-bottom;
-      transition-duration: 200ms;
-      transition-delay: 30ms;
-      transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-
-      &:is(:hover, :focus-visible) {
-        transform: translateY(-2px);
-      }
     }
   }
 

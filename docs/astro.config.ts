@@ -11,6 +11,10 @@ const site =
 export default defineConfig({
   integrations: [
     starlight({
+      locales: {
+        root: { label: 'English', lang: 'en' },
+        fr: { label: 'Français', lang: 'fr' },
+      },
       credits: true,
       editLink: {
         baseUrl: 'https://github.com/HiDeoo/starlight-theme-vintage/edit/main/docs/',
