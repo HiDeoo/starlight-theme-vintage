@@ -1,6 +1,6 @@
 import type { StarlightPlugin } from '@astrojs/starlight/types'
 
-// import { overrideComponents } from './libs/starlight'
+import { overrideComponents } from './libs/starlight'
 
 export default function starlightThemeRapidePlugin(): StarlightPlugin {
   return {
@@ -12,7 +12,7 @@ export default function starlightThemeRapidePlugin(): StarlightPlugin {
         //   !config.expressiveCode || config.expressiveCode === true ? {} : config.expressiveCode
 
         updateConfig({
-          // components: overrideComponents(config, ['LanguageSelect', 'Pagination', 'ThemeSelect'], logger),
+          components: overrideComponents(config, ['ThemeSelect'], logger),
           customCss: [
             ...(config.customCss ?? []),
             'starlight-theme-vintage/styles/layers',

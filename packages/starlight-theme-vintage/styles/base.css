@@ -16,10 +16,12 @@
    */
   header.header {
     border-bottom: none;
-    padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x) 0;
+    padding: var(--sl-nav-pad-y) 2.5rem 0 var(--sl-nav-pad-x);
 
-    @media (hover: hover) {
-      padding-inline-end: calc(var(--sl-nav-pad-x) + 1.1rem);
+    @media (min-width: 50rem) {
+      &:not(:has(starlight-lang-select)) {
+        padding-inline-end: var(--sl-nav-pad-x);
+      }
     }
 
     & div:has(> site-search) {
@@ -82,7 +84,7 @@
     }
 
     &::after {
-      border-inline-end: none;
+      display: none;
     }
   }
 

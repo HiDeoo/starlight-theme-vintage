@@ -7,6 +7,7 @@
   "type": "module",
   "exports": {
     ".": "./index.ts",
+    "./overrides/ThemeSelect.astro": "./overrides/ThemeSelect.astro",
     "./styles/anchors": "./styles/anchors.css",
     "./styles/base": "./styles/base.css",
     "./styles/layers": "./styles/layers.css",
