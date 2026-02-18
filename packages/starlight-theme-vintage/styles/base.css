@@ -324,17 +324,24 @@
       font-weight: 900;
       margin-top: 0.5rem;
     }
-  }
-  /* .content-panel {
-    padding-top: 1rem;
 
-    h1 {
+    .pagination-links a {
+      border-color: var(--sl-vintage-ui-border-color);
+      border-radius: 0;
+      box-shadow: var(--sl-shadow-sm);
 
-      @media (min-width: 72rem) {
-        margin-top: 1rem;
+      &:is(:hover, :focus-within) {
+        /* background-color: var(--sl-vintage-ui-bg-color); */
+        border-color: var(--sl-color-accent-high);
+        text-decoration: underline;
+        text-decoration-color: var(--sl-color-accent-high);
+
+        & svg {
+          color: var(--sl-color-accent-high);
+        }
       }
     }
-  } */
+  }
 
   /**
    * Table of contents
