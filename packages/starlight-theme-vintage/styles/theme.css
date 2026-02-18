@@ -110,6 +110,8 @@
 
     --sl-color-hairline-light: oklch(0.958 0.0048 var(--sl-vintage-hue-base) / 0.1);
 
+    --sl-menu-button-size: 2.25rem;
+
     --sl-vintage-page-bg-color-top: var(--sl-color-gray-6);
     --sl-vintage-page-bg-color-bottom: var(--sl-color-black);
     --sl-vintage-page-bg-color: linear-gradient(
