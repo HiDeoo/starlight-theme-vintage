@@ -118,6 +118,8 @@
   }
 
   starlight-lang-select {
+    align-self: center;
+
     select {
       background-color: var(--sl-color-hairline-light);
       border-radius: 0.25rem;
@@ -126,6 +128,7 @@
       font-size: var(--sl-text-base);
       font-weight: 400;
       padding-block: 0.1875rem;
+      padding-inline-end: 1rem;
 
       @media (prefers-reduced-motion: no-preference) {
         transition-property: border-color, color;
@@ -291,7 +294,12 @@
    * Sidebar
    */
   .sidebar-pane {
+    background: var(--sl-vintage-page-bg-color);
     border-inline-end: none;
+
+    @media (min-width: 50rem) {
+      background: none;
+    }
 
     summary {
       color: var(--sl-vintage-ui-accent-color);
@@ -334,7 +342,7 @@
       }
     }
 
-    a {
+    a:not(.mobile-preferences a) {
       --sl-sidebar-item-padding-inline: 0.625rem;
 
       border-radius: 0;
@@ -347,6 +355,11 @@
         background-color: var(--sl-vintage-ui-accent-bg-color);
         color: var(--sl-vintage-ui-accent-color);
       }
+    }
+
+    .mobile-preferences {
+      border-top-color: var(--sl-vintage-ui-border-color);
+      padding-inline: 0.5rem;
     }
   }
 
@@ -384,7 +397,7 @@
    * Table of contents
    */
   .right-sidebar {
-    border-inline-start: initial;
+    border-inline-start: none;
 
     @media (min-width: 72rem) {
       padding-top: calc(var(--sl-nav-height) + 2.5rem);
@@ -440,7 +453,7 @@
       details {
         summary {
           background-color: var(--sl-vintage-page-bg-color-top);
-          border-bottom: initial;
+          border-bottom: none;
           font-size: var(--sl-text-sm);
 
           & .toggle {
