@@ -50,8 +50,16 @@ const id = `moon-mask-${crypto.randomBytes(4).toString('hex')}`
       border-radius: 99rem;
       cursor: pointer;
       height: 2.25rem;
-      margin-inline: 0.5rem 0.5rem;
+      margin-inline: 0.5rem 0;
       padding-inline: 0.5625rem;
+
+      starlight-vintage-theme-select:has(~ starlight-lang-select) & {
+        margin-inline-end: 0.5rem;
+      }
+
+      @media (min-width: 50rem) {
+        margin-inline-end: 0.5rem;
+      }
 
       @media (prefers-reduced-motion: no-preference) {
         transition-property: border-color, color;

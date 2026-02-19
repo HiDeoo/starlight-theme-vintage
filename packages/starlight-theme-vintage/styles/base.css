@@ -11,12 +11,14 @@
     background: var(--sl-vintage-page-bg-color);
   }
 
+  /* // TODO(HiDeoo) search can cut off title at breakpoint */
+
   /**
    * Header
    */
   header.header {
     border-bottom: none;
-    padding: var(--sl-nav-pad-y) 5.125rem 0 var(--sl-nav-pad-x);
+    padding: var(--sl-nav-pad-y) 4.125rem 0 var(--sl-nav-pad-x);
 
     @media (min-width: 50rem) {
       [data-has-sidebar] & {
@@ -75,6 +77,7 @@
 
   @media (min-width: 50rem) {
     div.header {
+      gap: 1rem;
       grid-template-columns:
         1fr
         minmax(auto, 16.5rem)
@@ -159,7 +162,7 @@
     border: 1px solid var(--sl-color-hairline-light);
     box-shadow: none;
     color: var(--sl-color-gray-2);
-    inset-inline-end: calc(var(--sl-nav-pad-x) + 1rem);
+    inset-inline-end: var(--sl-nav-pad-x);
     justify-content: center;
     top: calc((var(--sl-nav-height) - var(--sl-menu-button-size) + 0.75rem) / 2);
 
