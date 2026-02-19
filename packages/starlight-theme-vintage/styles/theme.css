@@ -39,42 +39,13 @@
   :root,
   ::backdrop {
     --sl-color-white: oklch(0.9156 0.0097 var(--sl-vintage-hue-base));
-    /* // TODO(HiDeoo)  */
-    /* --sl-color-gray-1: red; */
+    --sl-color-gray-1: oklch(0.8724 0.0148 var(--sl-vintage-hue-base));
     --sl-color-gray-2: oklch(0.8292 0.0199 var(--sl-vintage-hue-base));
     --sl-color-gray-3: oklch(0.7407 0.0307 var(--sl-vintage-hue-base));
     --sl-color-gray-4: oklch(0.8494 0.0178 var(--sl-vintage-hue-base) / 0.6);
     --sl-color-gray-5: oklch(0.958 0.0048 var(--sl-vintage-hue-base) / 0.4);
     --sl-color-gray-6: oklch(0.2784 0.048 var(--sl-vintage-hue-base));
-    /* // TODO(HiDeoo)  */
-    /* --sl-color-gray-7: red; */
     --sl-color-black: oklch(0.203 0.0322 var(--sl-vintage-hue-base));
-
-    /*
-
-    --sl-color-green-low: oklch(20% 0.018 var(--sl-hue-green));
-    --sl-color-green: oklch(61% 0.115 var(--sl-hue-green));
-    --sl-color-green-high: oklch(86% 0.054 var(--sl-hue-green));
-    --sl-color-green-accent: oklch(93% 0.054 var(--sl-hue-green));
-    --sl-color-green-accent-invert: oklch(66% 0.14 var(--sl-hue-green));
-
-    --sl-hue-accent: 164;
-    --sl-color-accent-low: oklch(19% 0.02 var(--sl-hue-accent));
-    --sl-color-accent: oklch(50% 0.085 var(--sl-hue-accent));
-    --sl-color-accent-high: oklch(61% 0.085 var(--sl-hue-accent));
-
-    --sl-color-bg-nav: var(--sl-color-black);
-    --sl-color-bg-sidebar: var(--sl-color-black);
-    --sl-color-backdrop-overlay: oklch(24% 0.002 var(--sl-hue-base) / 0.7);
-
-    --sl-rapide-ui-bg-color: oklch(18% 0 0);
-    --sl-rapide-ui-header-bg-color: oklch(18% 0.002 var(--sl-hue-base) / 0.8);
-    --sl-rapide-ui-border-color: oklch(28% 0.004 var(--sl-hue-base));
-
-     */
-
-    /* --sl-color-accent-low: red; */
-    /* --sl-color-accent: red; */
 
     --sl-color-blue: oklch(0.5351 0.2523 var(--sl-hue-blue));
     --sl-color-blue-low: oklch(from var(--sl-color-blue) l c h / 0.4);
@@ -96,14 +67,14 @@
     --sl-color-red-low: oklch(from var(--sl-color-red) l c h / 0.4);
     --sl-color-red-high: oklch(0.8905 0.0902 var(--sl-hue-red));
 
-    /* // TODO(HiDeoo)  */
-    --sl-color-accent-high: oklch(0.7306 0.1783 47);
+    --sl-color-accent: oklch(0.7306 0.1783 47);
+    --sl-color-accent-high: var(--sl-color-accent);
+    --sl-color-accent-low: oklch(from var(--sl-color-accent-high) l c h / 0.05);
 
     --sl-color-bg: var(--sl-vintage-page-bg-color-bottom);
     --sl-color-bg-nav: var(--sl-color-gray-6);
     --sl-color-bg-sidebar: initial;
     --sl-color-bg-inline-code: oklch(1 0 0 / 0.086);
-    /* --sl-color-bg-accent: red; */
 
     --sl-color-hairline-light: oklch(0.958 0.0048 var(--sl-vintage-hue-base) / 0.1);
 
