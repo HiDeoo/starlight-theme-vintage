@@ -462,7 +462,7 @@
       text-underline-offset: 0.08em;
 
       &:is(:hover, :focus-visible) {
-        /* color: var(--sl-color-accent-high); */
+        color: var(--sl-color-white);
       }
     }
 
@@ -520,15 +520,6 @@
   }
 
   /* .sl-markdown-content {
-    a:not(:where(.not-content *)) {
-      color: var(--sl-color-white);
-      text-underline-offset: 0.25em;
-
-      &:is(:hover, :focus-visible) {
-        color: var(--sl-color-accent-high);
-      }
-    }
-
     .expressive-code {
       .has-title {
         --ec-uiPadBlk: 0.375rem;
@@ -800,8 +791,7 @@
       text-underline-offset: 0.25em;
 
       &:is(:hover, :focus-visible) {
-        /* // TODO(HiDeoo)  */
-        /* color: var(--sl-color-green-accent-invert); */
+        color: var(--sl-color-white);
       }
     }
 
