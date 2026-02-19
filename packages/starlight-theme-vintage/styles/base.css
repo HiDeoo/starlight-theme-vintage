@@ -11,8 +11,6 @@
     background: var(--sl-vintage-page-bg-color);
   }
 
-  /* // TODO(HiDeoo) search can cut off title at breakpoint */
-
   /**
    * Header
    */
@@ -185,57 +183,41 @@
   /**
    * Search
    */
-  /* site-search {
+  site-search {
     dialog {
-      background-color: var(--sl-color-black);
-      box-shadow: none;
-      min-height: auto;
+      background-color: var(--sl-vintage-ui-bg-color);
+      border-color: var(--sl-vintage-ui-border-color);
+      border-width: 0;
+      box-shadow: var(--sl-shadow-sm);
 
-      .dialog-frame {
-        padding: 1rem;
+      @media (min-width: 50rem) {
+        border-width: var(--sl-vintage-ui-border-width);
       }
 
-      #starlight__search {
-        --sl-search-corners: calc(0.5rem * var(--pagefind-ui-scale));
-        --pagefind-ui-border-radius: calc(0.5rem * var(--pagefind-ui-scale));
+      .pagefind-ui__form::before {
+        background-color: var(--sl-color-gray-2);
       }
 
       .pagefind-ui__search-input {
-        background-color: var(--sl-rapide-ui-bg-color);
-        border: 1px solid var(--sl-color-gray-4);
+        background-color: var(--sl-color-gray-6);
+        border-color: var(--sl-vintage-ui-border-color);
+        color: var(--sl-color-gray-2);
 
-        &:focus-visible {
-          border-color: var(--sl-color-accent);
-          outline: 1px solid var(--sl-color-accent);
+        &::placeholder {
+          color: var(--sl-color-white);
+          opacity: 0.4;
         }
       }
 
       .pagefind-ui__message {
         padding-top: 0;
-
-        &:has(+ .pagefind-ui__results:empty) {
-          padding: 0;
-        }
       }
 
       :is(.pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)), .pagefind-ui__result-nested) {
-        border-inline: 1px solid var(--sl-rapide-ui-border-color);
-        outline-offset: -1px;
+        background-color: oklch(from var(--sl-color-accent-high) l c h / 0.05);
 
         &:not(:focus-within) {
-          background-color: var(--sl-rapide-ui-bg-color);
-        }
-      }
-
-      .pagefind-ui__result-inner {
-        gap: 0;
-
-        & > :first-child {
-          border-top: 1px solid var(--sl-rapide-ui-border-color);
-        }
-
-        & > :last-child {
-          border-bottom: 1px solid var(--sl-rapide-ui-border-color);
+          background-color: var(--sl-color-gray-6);
         }
       }
 
@@ -243,55 +225,19 @@
         color: var(--sl-color-accent-high);
       }
 
-      @media (prefers-reduced-motion: no-preference) {
-        &::backdrop {
-          animation: sl-rapide-search-backdrop-fade 150ms ease-out;
+      .pagefind-ui__button {
+        background-color: var(--sl-color-gray-6);
+        border-color: var(--sl-vintage-ui-border-color);
+        color: var(--sl-color-gray-2);
+        margin-top: 1.5rem;
+
+        &:is(:hover, :focus-visible) {
+          border-color: var(--sl-color-accent-high);
+          color: var(--sl-color-white);
         }
-
-        & {
-          animation: sl-rapide-search-dialog-zoom-in 150ms ease-out;
-        }
-      }
-    }
-
-    @media (min-width: 50rem) {
-      div:has(> &) {
-        justify-content: center;
-      }
-    }
-
-    @media (min-width: 72rem) {
-      div:has(> &) {
-        max-width: calc(var(--sl-content-width));
       }
     }
   }
-
-  @keyframes sl-rapide-search-backdrop-fade {
-    from {
-      -webkit-backdrop-filter: initial;
-      backdrop-filter: initial;
-      background-color: transparent;
-    }
-
-    to {
-      -webkit-backdrop-filter: blur(0.25rem);
-      backdrop-filter: blur(0.25rem);
-      background-color: var(--sl-color-backdrop-overlay);
-    }
-  }
-
-  @keyframes sl-rapide-search-dialog-zoom-in {
-    from {
-      opacity: 0;
-      transform: scale(0.5) translateY(-2rem);
-    }
-
-    to {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-    }
-  } */
 
   /**
    * Sidebar
