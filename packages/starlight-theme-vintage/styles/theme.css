@@ -69,7 +69,7 @@
 
     --sl-color-accent: oklch(0.7306 0.1783 47);
     --sl-color-accent-high: var(--sl-color-accent);
-    --sl-color-accent-low: oklch(from var(--sl-color-accent-high) l c h / 0.05);
+    --sl-color-accent-low: oklch(from var(--sl-color-accent) l c h / 0.05);
 
     --sl-color-bg: var(--sl-vintage-page-bg-color-bottom);
     --sl-color-bg-nav: var(--sl-color-gray-6);
