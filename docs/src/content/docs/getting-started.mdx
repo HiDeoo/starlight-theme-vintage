@@ -1,7 +1,9 @@
 ---
 title: Getting Started
-description: Learn how to use the Starlight Rapide theme in your documentation.
+description: Learn how to use the Starlight Vintage theme in your documentation.
 ---
+
+{/* // TODO(HiDeoo) */}
 
 A [Starlight](https://starlight.astro.build) theme inspired by the Visual Studio Code [Vitesse theme](https://marketplace.visualstudio.com/items?itemName=antfu.theme-vitesse).
 Check out the various [examples](/examples/asides/) to see the theme in action.
@@ -18,9 +20,9 @@ import { PackageManagers } from '@hideoo/starlight-plugins-docs-components'
 
 <Steps>
 
-1. The Starlight Rapide theme is a Starlight [plugin](https://starlight.astro.build/reference/plugins/) that you can install using your favorite package manager:
+1. The Starlight Vintage theme is a Starlight [plugin](https://starlight.astro.build/reference/plugins/) that you can install using your favorite package manager:
 
-   <PackageManagers pkg="starlight-theme-rapide" />
+   <PackageManagers pkg="starlight-theme-vintage" />
 
 2. Configure the plugin in your Starlight [configuration](https://starlight.astro.build/reference/configuration/#plugins) in the `astro.config.mjs` file.
 
@@ -28,12 +30,12 @@ import { PackageManagers } from '@hideoo/starlight-plugins-docs-components'
    // astro.config.mjs
    import starlight from '@astrojs/starlight'
    import { defineConfig } from 'astro/config'
-   +import starlightThemeRapide from 'starlight-theme-rapide'
+   +import starlightThemeVintage from 'starlight-theme-vintage'
 
    export default defineConfig({
      integrations: [
        starlight({
-   +      plugins: [starlightThemeRapide()],
+   +      plugins: [starlightThemeVintage()],
          title: 'My Docs',
        }),
      ],
@@ -44,4 +46,4 @@ import { PackageManagers } from '@hideoo/starlight-plugins-docs-components'
 
 </Steps>
 
-That's it! You should now see the Starlight Rapide theme applied to your Starlight website.
+That's it! You should now see the Starlight Vintage theme applied to your Starlight website.
