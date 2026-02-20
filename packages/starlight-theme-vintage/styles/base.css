@@ -27,7 +27,11 @@
    */
   header.header {
     border-bottom: none;
-    padding: var(--sl-nav-pad-y) 4.125rem 0 var(--sl-nav-pad-x);
+    padding: var(--sl-nav-pad-y) 1rem 0 var(--sl-nav-pad-x);
+
+    [data-has-sidebar] & {
+      padding-inline-end: 4.125rem;
+    }
 
     @media (min-width: 50rem) {
       [data-has-sidebar] & {
