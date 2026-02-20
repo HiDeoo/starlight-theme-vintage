@@ -80,10 +80,12 @@
 
     --sl-menu-button-size: 2.25rem;
 
-    --sl-vintage-ec-editor-active-tab-bg-color: oklch(0.5765 0.1254 var(--sl-vintage-hue-base));
-    --sl-vintage-ec-editor-tab-bar-bg-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.2);
-    --sl-vintage-ec-marker-bg-color: oklch(0.5351 0.2523 var(--sl-vintage-hue-base) / 0.2);
-    --sl-vintage-ec-marker-border-color: var(--sl-vintage-ui-accent-bg-color);
+    --sl-vintage-ec-editor-tab-bar-bg-color: var(--sl-vintage-ui-accent-dimmed-bg-color);
+    --sl-vintage-ec-editor-tab-bar-border-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.2);
+    --sl-vintage-ec-inline-button-border-color: var(--sl-color-gray-4);
+    --sl-vintage-ec-marker-bg-color: oklch(0.5351 0.2523 var(--sl-vintage-hue-base) / 0.15);
+    --sl-vintage-ec-marker-border-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.75);
+    --sl-vintage-ec-terminal-titlebar-dots-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.3);
 
     --sl-vintage-page-bg-color-top: var(--sl-color-gray-6);
     --sl-vintage-page-bg-color-bottom: var(--sl-color-black);
@@ -141,10 +143,11 @@
 
     --sl-color-hairline-light: oklch(0.5351 0.2523 299.13 / 0.1);
 
-    /* --sl-vintage-ec-editor-active-tab-bg-color: oklch(0.5765 0.1254 var(--sl-vintage-hue-base)); */
-    /* --sl-vintage-ec-editor-tab-bar-bg-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.2); */
-    /* --sl-vintage-ec-marker-bg-color: oklch(0.5351 0.2523 var(--sl-vintage-hue-base) / 0.2); */
-    /* --sl-vintage-ec-marker-border-color: var(--sl-vintage-ui-accent-bg-color); */
+    --sl-vintage-ec-editor-tab-bar-bg-color: oklch(0.3351 0.2523 var(--sl-vintage-hue-base) / 0.15);
+    --sl-vintage-ec-editor-tab-bar-border-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.15);
+    --sl-vintage-ec-inline-button-border-color: var(--sl-color-gray-3);
+    --sl-vintage-ec-marker-bg-color: oklch(0.5351 0.2523 var(--sl-vintage-hue-base) / 0.2);
+    --sl-vintage-ec-terminal-titlebar-dots-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.2);
 
     --sl-vintage-page-bg-color: linear-gradient(
       180deg,

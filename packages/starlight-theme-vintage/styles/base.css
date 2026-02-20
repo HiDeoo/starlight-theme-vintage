@@ -538,6 +538,12 @@
     td:not(:where(.not-content *)) {
       border-bottom: 1px solid var(--sl-vintage-ui-border-color);
     }
+
+    .expressive-code {
+      .title {
+        font-weight: 500;
+      }
+    }
   }
 
   /* // TODO(HiDeoo) sidebar 1px gap between pages */
