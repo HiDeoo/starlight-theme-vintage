@@ -305,6 +305,8 @@
       --sl-sidebar-item-padding-inline: 0.625rem;
 
       border-radius: 0;
+      line-height: 1.35;
+      margin-bottom: 1px;
 
       &:is(:hover, :focus-visible) {
         background-color: var(--sl-vintage-ui-accent-dimmed-bg-color);
@@ -545,8 +547,6 @@
       }
     }
   }
-
-  /* // TODO(HiDeoo) sidebar 1px gap between pages */
 
   /**
    * Tabs
