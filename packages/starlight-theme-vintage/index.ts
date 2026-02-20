@@ -2,9 +2,9 @@ import type { StarlightPlugin } from '@astrojs/starlight/types'
 
 import { overrideComponents } from './libs/starlight'
 
-export default function starlightThemeRapidePlugin(): StarlightPlugin {
+export default function starlightThemeVintagePlugin(): StarlightPlugin {
   return {
-    name: 'starlight-theme-rapide',
+    name: 'starlight-theme-vintage',
     hooks: {
       'config:setup'({ config, logger, updateConfig }) {
         const userExpressiveCodeConfig =
