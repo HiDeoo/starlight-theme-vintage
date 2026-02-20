@@ -17,6 +17,11 @@
     }
   }
 
+  ::selection {
+    color: var(--sl-vintage-page-selection-color);
+    background-color: var(--sl-vintage-page-selection-bg-color);
+  }
+
   /**
    * Header
    */

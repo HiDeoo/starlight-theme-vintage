@@ -83,7 +83,7 @@
     --sl-vintage-ec-editor-tab-bar-bg-color: var(--sl-vintage-ui-accent-dimmed-bg-color);
     --sl-vintage-ec-editor-tab-bar-border-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.2);
     --sl-vintage-ec-inline-button-border-color: var(--sl-color-gray-4);
-    --sl-vintage-ec-marker-bg-color: oklch(0.5351 0.2523 var(--sl-vintage-hue-base) / 0.15);
+    --sl-vintage-ec-marker-bg-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.15);
     --sl-vintage-ec-marker-border-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.75);
     --sl-vintage-ec-terminal-titlebar-dots-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.3);
 
@@ -95,6 +95,8 @@
       var(--sl-vintage-page-bg-color-top) calc(var(--sl-nav-height) + var(--sl-mobile-toc-height)),
       var(--sl-vintage-page-bg-color-bottom)
     );
+    --sl-vintage-page-selection-bg-color: var(--sl-vintage-ui-accent-bg-color);
+    --sl-vintage-page-selection-color: var(--sl-vintage-ui-accent-color);
 
     --sl-vintage-ui-accent-alt-color: var(--sl-color-accent-high);
     --sl-vintage-ui-accent-bg-color: oklch(0.5351 0.2523 var(--sl-vintage-hue-base) / 0.4);
@@ -141,7 +143,7 @@
 
     --sl-color-bg-inline-code: var(--sl-color-hairline-light);
 
-    --sl-color-hairline-light: oklch(0.5351 0.2523 299.13 / 0.1);
+    --sl-color-hairline-light: var(--sl-vintage-ui-accent-bg-color);
 
     --sl-vintage-ec-editor-tab-bar-bg-color: oklch(0.3351 0.2523 var(--sl-vintage-hue-base) / 0.15);
     --sl-vintage-ec-editor-tab-bar-border-color: oklch(from var(--sl-vintage-ui-accent-bg-color) l c h / 0.15);
@@ -155,10 +157,11 @@
       var(--sl-vintage-page-bg-color-top) calc(var(--sl-nav-height) + var(--sl-mobile-toc-height)),
       var(--sl-vintage-page-bg-color-bottom)
     );
+    --sl-vintage-page-selection-color: oklch(from var(--sl-color-gray-5) l c h / 1);
 
     --sl-vintage-ui-accent-alt-color: oklch(0.6854 0.2108 41);
-    --sl-vintage-ui-accent-bg-color: oklch(0.5351 0.2523 var(--sl-vintage-hue-base) / 0.1);
-    --sl-vintage-ui-accent-dimmed-bg-color: oklch(0.5351 0.2523 var(--sl-vintage-hue-base) / 0.075);
+    --sl-vintage-ui-accent-bg-color: oklch(from var(--sl-color-gray-5) l c h / 0.1);
+    --sl-vintage-ui-accent-dimmed-bg-color: oklch(from var(--sl-color-gray-5) l c h / 0.075);
     --sl-vintage-ui-accent-color: oklch(0.2045 0.0142 var(--sl-vintage-hue-base));
     --sl-vintage-ui-hue-base: calc(var(--sl-vintage-hue-base) + 12);
     --sl-vintage-ui-bg-color: oklch(0.9374 0.0233 var(--sl-vintage-ui-hue-base));
