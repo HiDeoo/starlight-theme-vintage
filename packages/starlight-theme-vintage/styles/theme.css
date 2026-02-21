@@ -59,7 +59,7 @@
     --sl-color-orange-low: oklch(from var(--sl-color-orange) l c h / 0.4);
     --sl-color-orange-high: oklch(0.9345 0.0721 var(--sl-hue-orange));
 
-    --sl-color-purple: oklch(0.7348 0.122824 var(--sl-hue-purple));
+    --sl-color-purple: oklch(0.7348 0.1228 var(--sl-hue-purple));
     --sl-color-purple-low: oklch(from var(--sl-color-purple) l c h / 0.4);
     --sl-color-purple-high: oklch(0.9361 0.0613 var(--sl-hue-purple));
 

@@ -68,7 +68,6 @@
         @media (min-width: 50rem) {
           background-color: initial;
           border-color: var(--sl-color-gray-5);
-          height: 2.25rem;
           padding-inline: 0.75rem 0.5rem;
           width: min(16.5rem, 100%);
 
