@@ -2,7 +2,7 @@
   "name": "starlight-theme-vintage",
   "version": "0.0.1",
   "license": "MIT",
-  "description": "// TODO(HiDeoo)",
+  "description": "Starlight theme heavily inspired by the timeless design of the legacy Astro documentation.",
   "author": "HiDeoo <github@hideoo.dev> (https://hideoo.dev)",
   "type": "module",
   "exports": {

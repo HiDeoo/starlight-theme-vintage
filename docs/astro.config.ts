@@ -22,7 +22,7 @@ export default defineConfig({
           tag: 'meta',
           attrs: {
             property: 'og:image:alt',
-            content: 'Starlight theme inspired by the timeless design of the legacy Astro documentation.',
+            content: 'Starlight theme heavily inspired by the timeless design of the legacy Astro documentation.',
           },
         },
       ],
