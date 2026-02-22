@@ -674,12 +674,16 @@
       );
     }
 
-    tr:nth-child(2n) {
+    tr:nth-child(2n):not(:where(.not-content *)) {
       background-color: var(--sl-vintage-asides-table-alt-color);
     }
 
-    td {
+    td:not(:where(.not-content *)) {
       border-color: var(--sl-vintage-asides-table-border-color);
+    }
+
+    code:not(:where(.not-content *)) {
+      color: var(--sl-vintage-ui-accent-color);
     }
   }
 
