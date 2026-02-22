@@ -4,7 +4,7 @@ import starlightThemeVintage from 'starlight-theme-vintage'
 
 const site =
   (process.env['CONTEXT'] === 'production' ? process.env['URL'] : process.env['DEPLOY_PRIME_URL']) ??
-  'https://telephony-investigated-background-kingdom.trycloudflare.com/'
+  'https://starlight-theme-vintage.netlify.app/'
 
 export default defineConfig({
   integrations: [

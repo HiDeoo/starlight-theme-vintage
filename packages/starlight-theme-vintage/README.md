@@ -1,9 +1,9 @@
 <div align="center">
-  <h1>starlight-theme-vintage 🚧</h1>
-  <p>starlight-theme-vintage description</p>
+  <h1>starlight-theme-vintage 🪩</h1>
+  <p>Starlight theme heavily inspired by the timeless design of the legacy Astro documentation.</p>
   <p>
-    <a href="https://dummyimage.com/520x350/121212/cdc8be.png&text=screenshot" title="Screenshot of starlight-theme-vintage">
-      <img alt="Screenshot of starlight-theme-vintage" src="https://dummyimage.com/520x350/121212/cdc8be.png&text=screenshot" width="520" />
+    <a href="https://i.imgur.com/aKWLIcS.png" title="Screenshot of the Starlight Vintage theme in dark and light mode">
+      <img alt="Screenshot of the Starlight Vintage theme in dark and light mode" src="https://i.imgur.com/aKWLIcS.png" width="520" />
     </a>
   </p>
 </div>
@@ -18,12 +18,9 @@
   <br />
 </div>
 
-## Features
+## Getting Started
 
-starlight-theme-vintage presentation.
-
-- starlight-theme-vintage feature 1
-- starlight-theme-vintage feature 2
+Want to get started immediately? Check out the [getting started guide](https://starlight-theme-vintage.netlify.app/getting-started/) or check out the various [examples](https://starlight-theme-vintage.netlify.app/examples/asides/) to see the theme in action.
 
 ## License
 
