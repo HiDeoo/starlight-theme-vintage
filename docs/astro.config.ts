@@ -2,11 +2,9 @@ import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
 import starlightThemeVintage from 'starlight-theme-vintage'
 
-// TODO(HiDeoo) public/favicon
-// TODO(HiDeoo) public/og
 const site =
   (process.env['CONTEXT'] === 'production' ? process.env['URL'] : process.env['DEPLOY_PRIME_URL']) ??
-  'https://starlight-theme-vintage.netlify.app/'
+  'https://telephony-investigated-background-kingdom.trycloudflare.com/'
 
 export default defineConfig({
   integrations: [
@@ -18,17 +16,13 @@ export default defineConfig({
       head: [
         {
           tag: 'meta',
-          attrs: {
-            property: 'og:image',
-            // TODO(HiDeoo)
-            content: new URL('og.jpg', site).href,
-          },
+          attrs: { property: 'og:image', content: new URL('og.jpg', site).href },
         },
         {
           tag: 'meta',
           attrs: {
             property: 'og:image:alt',
-            content: '// TODO(HiDeoo)',
+            content: 'Starlight theme inspired by the timeless design of the legacy Astro documentation.',
           },
         },
       ],
