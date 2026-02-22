@@ -159,7 +159,7 @@
     );
     --sl-vintage-page-selection-color: oklch(from var(--sl-color-gray-5) l c h / 1);
 
-    --sl-vintage-ui-accent-alt-color: oklch(0.6854 0.2108 41);
+    --sl-vintage-ui-accent-alt-color: oklch(0.6354 0.2108 41);
     --sl-vintage-ui-accent-bg-color: oklch(from var(--sl-color-gray-5) l c h / 0.1);
     --sl-vintage-ui-accent-dimmed-bg-color: oklch(from var(--sl-color-gray-5) l c h / 0.075);
     --sl-vintage-ui-accent-color: oklch(0.2045 0.0142 var(--sl-vintage-hue-base));
