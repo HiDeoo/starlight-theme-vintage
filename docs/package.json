@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "test": "playwright install --with-deps chromium && playwright test",
     "lint": "eslint . --cache --max-warnings=0"
   },
   "dependencies": {
@@ -17,6 +18,10 @@
     "astro": "^5.17.1",
     "sharp": "^0.34.5",
     "starlight-theme-vintage": "workspace:*"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "axe-playwright": "^2.2.2"
   },
   "engines": {
     "node": ">=18"
