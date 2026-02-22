@@ -8,6 +8,7 @@
 build
 coverage
 dist
+docs/src/content/docs/examples/steps.mdx
 dist-ssr
 out
 pnpm-lock.yaml
