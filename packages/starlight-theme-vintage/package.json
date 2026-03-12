@@ -21,9 +21,9 @@
     "@astrojs/starlight": ">=0.37.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22.12.0"
   },
-  "packageManager": "pnpm@10.29.2",
+  "packageManager": "pnpm@10.32.1",
   "publishConfig": {
     "access": "public"
   },
