@@ -27,17 +27,17 @@ export const test = baseTest.extend<{
   docsSite: async ({ page }, use) => use(new DocsSite(page)),
 })
 
+export function getAllUrls() {
+  return config.paths.map((path) => config.url + path)
+}
+
+export function getColorSchemes() {
+  return config.colorSchemes
+}
+
 // A Playwright test fixture accessible from within all tests.
 class DocsSite {
   constructor(private readonly page: Page) {}
-
-  getAllUrls() {
-    return config.paths.map((path) => config.url + path)
-  }
-
-  getColorSchemes() {
-    return config.colorSchemes
-  }
 
   async testPage(url: string, colorScheme: ColorScheme) {
     await this.page.emulateMedia({ colorScheme })
