@@ -1,10 +1,15 @@
-import { expect, test } from './test-utils'
+import { expect, getAllUrls, getColorSchemes, test } from './test-utils'
 
-test('does not report accessibility violations on the docs site', async ({ docsSite }) => {
-  let violationsCount = 0
+const urls = getAllUrls()
+const colorSchemes = getColorSchemes()
 
-  for (const colorScheme of docsSite.getColorSchemes()) {
-    for (const url of docsSite.getAllUrls()) {
+for (const url of urls) {
+  const { pathname } = new URL(url)
+
+  for (const colorScheme of colorSchemes) {
+    test(`does not report accessibility violations: ${pathname} - ${colorScheme}`, async ({ docsSite }) => {
+      let violationsCount = 0
+
       const violations = await docsSite.testPage(url, colorScheme)
 
       if (violations.length > 0) {
@@ -12,11 +17,11 @@ test('does not report accessibility violations on the docs site', async ({ docsS
       }
 
       await docsSite.reportPageViolations(violations, colorScheme)
-    }
-  }
 
-  expect(
-    violationsCount,
-    `Found ${violationsCount} accessibility violations. Check the errors above for more details.`,
-  ).toBe(0)
-})
+      expect(
+        violationsCount,
+        `Found ${violationsCount} accessibility violations. Check the errors above for more details.`,
+      ).toBe(0)
+    })
+  }
+}
