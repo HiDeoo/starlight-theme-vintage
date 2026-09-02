@@ -169,7 +169,7 @@
     }
   }
 
-  starlight-menu-button button {
+  .sl-menu-button {
     align-items: center;
     background-color: var(--sl-color-hairline-light);
     border: 1px solid var(--sl-color-hairline-light);
@@ -190,7 +190,7 @@
       color: var(--sl-vintage-ui-accent-alt-color);
     }
 
-    [aria-expanded='true'] & {
+    &:has(~ :popover-open) {
       border-color: var(--sl-color-gray-2);
     }
   }
