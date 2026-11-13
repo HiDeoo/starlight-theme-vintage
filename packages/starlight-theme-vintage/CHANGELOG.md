@@ -1,5 +1,17 @@
 # starlight-theme-vintage
 
+## 0.3.0
+
+### Minor Changes
+
+- [#9](https://github.com/HiDeoo/starlight-theme-vintage/pull/9) [`2c747d8`](https://github.com/HiDeoo/starlight-theme-vintage/commit/2c747d813e937d2eec349d9047db7706d2a9444d) Thanks [@HiDeoo](https://github.com/HiDeoo)! - ⚠️ **BREAKING CHANGE:** The minimum supported version of Starlight is now version `0.43.0`.
+
+  Please use the `@astrojs/upgrade` command to upgrade your project:
+
+  ```sh
+  npx @astrojs/upgrade
+  ```
+
 ## 0.2.0
 
 ### Minor Changes
